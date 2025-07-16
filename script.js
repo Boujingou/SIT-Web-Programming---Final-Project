@@ -118,6 +118,9 @@ async function loadTourCards() {
     const response = await fetch('api/get_tours.php');
     const tours = await response.json();
 
+    console.log("API result:", tours);
+    console.log(Array.isArray(tours), typeof tours);
+
     tours.forEach(tour => {
         const card = createTourCard(tour);
         grid.appendChild(card);
@@ -130,35 +133,27 @@ function createTourCard(tour) {
     card.setAttribute('data-city', tour.city);
 
     card.innerHTML = `
-        <img src="${tour.image}" alt="${tour.title}" class="tour-image">
+        <img src="${tour.image_path}" alt="${tour.tour_name}" class="tour-image">
         <div class="tour-content">
             <div class="tour-header">
                 <span class="tour-city">${tour.city}</span>
                 <div class="tour-rating">
                     <span class="star">★</span>
-                    <span>${tour.rating}</span>
+                    <span>${tour.reviews_rating} (${tour.reviews_count})</span>
                 </div>
             </div>
-            <h3 class="tour-title">${tour.title}</h3>
-            <p class="tour-description">${tour.description}</p>
+            <h3 class="tour-title">${tour.tour_name}</h3>
+            <p class="tour-description">${tour.tour_description}</p>
             <div class="tour-footer">
                 <div>
-                    <span class="tour-price">¥${tour.price.toLocaleString()}</span>
+                    <span class="tour-price">¥${parseFloat(tour.price_yen).toLocaleString()}</span>
                     <span class="price-unit">/person</span>
                 </div>
-                <button class="btn" onclick="openBookingModal('${tour.title}', '${tour.city}', ${tour.price})">Book Now</button>
+                <button class="btn" onclick="openBookingModal('${tour.tour_name}', '${tour.city}', ${tour.price_yen})">Book Now</button>
             </div>
         </div>
     `;
     return card;
-}
-
-function loadTourCards() {
-    const grid = document.getElementById('toursGrid');
-    tours.forEach(tour => {
-        const card = createTourCard(tour);
-        grid.appendChild(card);
-    });
 }
 
 window.addEventListener('DOMContentLoaded', loadTourCards);

@@ -14,7 +14,11 @@ CREATE TABLE tour_list (
     tour_name VARCHAR(100) NOT NULL,
     city VARCHAR(100) NOT NULL,
     price_yen DECIMAL(10, 2) NOT NULL,
-    available_seats INT NOT NULL
+    available_seats INT NOT NULL, 
+    reviews_rating DECIMAL(2, 1) DEFAULT 0.0,
+    reviews_count INT DEFAULT 0,
+    tour_description TEXT,
+    image_path VARCHAR(255)
 );
 
 CREATE TABLE reservation (
@@ -29,32 +33,36 @@ CREATE TABLE reservation (
     FOREIGN KEY (client_id) REFERENCES client(client_id)
 );
 
-INSERT INTO tour_list (tour_id, tour_name, city, price_yen, available_seats) VALUES
-(1, 'Tokyo City Tour', 'Tokyo', 23000, 24),
-(2, 'Asakusa & Skytree', 'Tokyo', 23000, 25),
-(3, 'Ghibli Museum Visit', 'Tokyo', 27000, 81),
-(4, 'Odaiba Cruise', 'Tokyo', 12000, 36),
-(5, 'Shibuya & Harajuku Walk', 'Tokyo', 5000, 74),
-(6, 'Arashiyama Bamboo Forest', 'Kyoto', 40000, 96),
-(7, 'Fushimi Inari Shrine Tour', 'Kyoto', 96000, 64),
-(8, 'Kyoto Tea Ceremony', 'Kyoto', 14500, 87),
-(9, 'Gion Geisha Experience', 'Kyoto', 26000, 71),
-(10, 'Kinkaku-ji Temple Tour', 'Kyoto', 9500, 40),
-(11, 'Osaka Castle & Park', 'Osaka', 6000, 73),
-(12, 'Universal Studios Japan', 'Osaka', 15000, 52),
-(13, 'Dotonbori Food Tour', 'Osaka', 19000, 50),
-(14, 'Osaka Aquarium Kaiyukan', 'Osaka', 2400, 57),
-(15, 'Umeda Sky Building View', 'Osaka', 1500, 49),
-(16, 'Sapporo Snow Festival Tour', 'Hokkaido', 60000, 47),
-(17, 'Otaru Canal & Glass Workshops', 'Hokkaido', 80000, 91),
-(18, 'Niseko Ski Experience', 'Hokkaido', 120000, 27),
-(19, 'Furano Flower Fields', 'Hokkaido', 9100, 35),
-(20, 'Shiretoko Nature Cruise', 'Hokkaido', 20000, 19),
-(21, 'Churaumi Aquarium Visit', 'Okinawa', 7300, 62),
-(22, 'Naha City Sightseeing', 'Okinawa', 7800, 28),
-(23, 'Okinawa Beach Relaxation', 'Okinawa', 7500, 73),
-(24, 'Snorkeling & Diving Tour', 'Okinawa', 5000, 32),
-(25, 'Okinawa World Culture Park', 'Okinawa', 5000, 50);
+INSERT INTO tour_list (tour_id, tour_name, city, price_yen, available_seats, reviews_rating, reviews_count, tour_description) VALUES
+(1, 'Tokyo City Tour', 'Tokyo', 23000, 24, 4.7, 128, 'Join a full-day tour through Tokyo’s must-see sights, including temples, markets, and neighborhoods. Perfect for first-time visitors wanting a complete overview.'),
+(2, 'Asakusa & Skytree', 'Tokyo', 23000, 25, 4.8, 145, 'Experience Tokyo’s traditional charm in Asakusa followed by panoramic views from the Skytree. A great balance of culture and modernity.'),
+(3, 'Ghibli Museum Visit', 'Tokyo', 27000, 81, 4.9, 210, 'Step into the magical world of Studio Ghibli with exclusive access to the enchanting museum. Ideal for fans of Totoro and Spirited Away.'),
+(4, 'Odaiba Cruise', 'Tokyo', 12000, 36, 4.5, 76, 'Sail through Tokyo Bay and enjoy the futuristic skyline of Odaiba from the water. A relaxing break from the busy city.'),
+(5, 'Shibuya & Harajuku Walk', 'Tokyo', 5000, 74, 4.6, 190, 'Wander the fashionable streets of Harajuku and experience the iconic Shibuya crossing. Great for shoppers and street culture lovers.'),
+
+(6, 'Arashiyama Bamboo Forest', 'Kyoto', 40000, 96, 4.9, 220, 'Walk through towering green stalks in one of Japan’s most iconic natural sights. A peaceful escape just outside the city center.'),
+(7, 'Fushimi Inari Shrine Tour', 'Kyoto', 96000, 64, 5.0, 243, 'Climb through the legendary vermillion torii gates of Fushimi Inari. This spiritual experience is unforgettable at sunrise or sunset.'),
+(8, 'Kyoto Tea Ceremony', 'Kyoto', 14500, 87, 4.7, 88, 'Take part in an authentic Japanese tea ceremony led by a local master. Learn the customs and quiet beauty behind this timeless ritual.'),
+(9, 'Gion Geisha Experience', 'Kyoto', 26000, 71, 4.8, 154, 'Stroll the cobblestone alleys of Gion and meet a real geisha. A cultural evening filled with tradition, elegance, and history.'),
+(10, 'Kinkaku-ji Temple Tour', 'Kyoto', 9500, 40, 4.6, 102, 'Admire the Golden Pavilion shining above its reflection pond. This UNESCO site is one of Kyoto’s most photogenic treasures.'),
+
+(11, 'Osaka Castle & Park', 'Osaka', 6000, 73, 4.5, 87, 'Explore Osaka Castle’s historic walls and lush surrounding parklands. A must-see for history lovers and photographers.'),
+(12, 'Universal Studios Japan', 'Osaka', 15000, 52, 4.9, 198, 'Enjoy world-class rides and movie-themed attractions in one of Asia’s top theme parks. Fun for all ages and thrill-seekers.'),
+(13, 'Dotonbori Food Tour', 'Osaka', 19000, 50, 4.8, 135, 'Taste Osaka’s famous street foods, from takoyaki to okonomiyaki, on this flavorful evening walk. A treat for your taste buds.'),
+(14, 'Osaka Aquarium Kaiyukan', 'Osaka', 2400, 57, 4.7, 79, 'See whale sharks, jellyfish, and sea lions in one of the largest aquariums in the world. A fascinating journey through ocean habitats.'),
+(15, 'Umeda Sky Building View', 'Osaka', 1500, 49, 4.4, 51, 'Get 360° views of Osaka from the floating observatory high above the city. Especially magical at night.'),
+
+(16, 'Sapporo Snow Festival Tour', 'Hokkaido', 60000, 47, 4.9, 221, 'Marvel at massive ice sculptures during Japan’s most famous winter festival. A dazzling mix of lights, art, and snow fun.'),
+(17, 'Otaru Canal & Glass Workshops', 'Hokkaido', 80000, 91, 4.6, 94, 'Stroll along Otaru’s romantic canal and try your hand at traditional glassblowing. A perfect day of history and hands-on fun.'),
+(18, 'Niseko Ski Experience', 'Hokkaido', 120000, 27, 5.0, 176, 'Hit the powdery slopes of Niseko, Japan’s top ski resort. Great for beginners and seasoned skiers alike.'),
+(19, 'Furano Flower Fields', 'Hokkaido', 9100, 35, 4.7, 108, 'Wander through colorful flower fields stretching across the hills of Furano. Best visited in spring and summer for vivid scenery.'),
+(20, 'Shiretoko Nature Cruise', 'Hokkaido', 20000, 19, 4.8, 72, 'Cruise along rugged coastlines and spot wildlife in one of Japan’s most untouched natural regions. A UNESCO World Heritage Site.'),
+
+(21, 'Churaumi Aquarium Visit', 'Okinawa', 7300, 62, 4.7, 114, 'Discover rare marine life and walk through massive underwater tunnels. Great for families and ocean lovers.'),
+(22, 'Naha City Sightseeing', 'Okinawa', 7800, 28, 4.5, 63, 'Explore Okinawa’s capital with stops at historic sites, markets, and Shurijo Castle. A relaxed introduction to island culture.'),
+(23, 'Okinawa Beach Relaxation', 'Okinawa', 7500, 73, 4.6, 92, 'Spend a carefree day on white-sand beaches with crystal-clear waters. Sun, swim, and simply unwind.'),
+(24, 'Snorkeling & Diving Tour', 'Okinawa', 5000, 32, 4.9, 147, 'Dive into coral reefs teeming with tropical fish. A must-do adventure for ocean explorers.'),
+(25, 'Okinawa World Culture Park', 'Okinawa', 5000, 50, 4.4, 58, 'Learn about Okinawan traditions, crafts, and performances in this cultural theme park. Great for curious travelers of all ages.');
 
 INSERT INTO client (client_id, client_name, client_email) VALUES 
 (1, 'Kenji Tanaka', 'kenji.tanaka@example.com'),
