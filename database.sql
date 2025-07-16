@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS travel_agency;
-CREATE DATABASE travel_agency;
-USE travel_agency;
+DROP DATABASE IF EXISTS reservation_system;
+CREATE DATABASE reservation_system;
+USE reservation_system;
 
 CREATE TABLE client (
     client_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -56,7 +56,7 @@ INSERT INTO tour_list (tour_id, tour_name, city, price_yen, available_seats) VAL
 (24, 'Snorkeling & Diving Tour', 'Okinawa', 5000, 32),
 (25, 'Okinawa World Culture Park', 'Okinawa', 5000, 50);
 
-INSERT INTO client (client_id, client_name, client_email, client_hash) VALUES 
+INSERT INTO client (client_id, client_name, client_email) VALUES 
 (1, 'Kenji Tanaka', 'kenji.tanaka@example.com'),
 (2, 'Ren Yamamoto', 'ren.yamamoto@example.com'),
 (3, 'Hiroshi Kobayashi', 'hiroshi.k@example.com'),
