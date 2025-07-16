@@ -1,0 +1,101 @@
+reservation_id,tour_id,reservation_date,number_of_guests,total_price_yen,reserved_by_author_name,reserved_by_author_email
+1,1,7/1/2025,2,46000,Kenji Tanaka,kenji.tanaka@example.com
+2,5,7/3/2025,4,20000,Ren Yamamoto,ren.yamamoto@example.com
+3,7,7/5/2025,1,96000,Hiroshi Kobayashi,hiroshi.k@example.com
+4,12,7/7/2025,3,45000,Sota Ito,sota.ito@example.com
+5,16,7/9/2025,2,120000,Haruto Watanabe,haruto.w@example.com
+6,22,7/11/2025,5,39000,Ryota Kato,ryota.kato@example.com
+7,2,7/2/2025,1,23000,Kaito Yamada,kaito.yamada@example.com
+8,6,7/4/2025,6,40000,Yuki Mori,yuki.mori@example.com
+9,9,7/6/2025,2,52000,Mio Shimizu,mio.shimizu@example.com
+10,14,7/8/2025,1,2400,Yuma Kimura,yuma.kimura@example.com
+11,18,7/10/2025,3,360000,Hina Takahashi,hina.takahashi@example.com
+12,24,7/12/2025,4,20000,Kenji Tanaka,kenji.tanaka@example.com
+13,3,7/3/2025,5,135000,Mai Sato,mai.sato@example.com
+14,8,7/5/2025,2,29000,Yui Suzuki,yui.suzuki@example.com
+15,11,7/7/2025,3,18000,Akari Takahashi,akari.t@example.com
+16,15,7/9/2025,1,1500,Yuna Nakamura,yuna.nakamura@example.com
+17,20,7/11/2025,4,80000,Aoi Ito,aoi.ito@example.com
+18,25,7/13/2025,2,10000,Sakura Yoshida,sakura.y@example.com
+19,4,7/4/2025,2,24000,Hinata Tanaka,hinata.tanaka@example.com
+20,10,7/6/2025,1,9500,Riku Hayashi,riku.hayashi@example.com
+21,13,7/8/2025,3,57000,Takumi Inoue,takumi.i@example.com
+22,17,7/10/2025,5,400000,Mai Sato,mai.sato@example.com
+23,21,7/12/2025,2,14600,Yui Suzuki,yui.suzuki@example.com
+24,23,7/14/2025,6,45000,Akari Takahashi,akari.t@example.com
+25,1,7/2/2025,3,69000,Yuna Nakamura,yuna.nakamura@example.com
+26,5,7/4/2025,2,10000,Aoi Ito,aoi.ito@example.com
+27,7,7/6/2025,4,384000,Sakura Yoshida,sakura.y@example.com
+28,12,7/8/2025,1,15000,Hinata Tanaka,hinata.tanaka@example.com
+29,16,7/10/2025,5,300000,Riku Hayashi,riku.hayashi@example.com
+30,22,7/12/2025,2,15600,Takumi Inoue,takumi.i@example.com
+31,2,7/3/2025,4,92000,Hina Takahashi,hina.takahashi@example.com
+32,6,7/5/2025,3,40000,Kenji Tanaka,kenji.tanaka@example.com
+33,9,7/7/2025,1,26000,Ren Yamamoto,ren.yamamoto@example.com
+34,14,7/9/2025,2,4800,Hiroshi Kobayashi,hiroshi.k@example.com
+35,18,7/11/2025,6,720000,Sota Ito,sota.ito@example.com
+36,24,7/13/2025,3,15000,Haruto Watanabe,haruto.w@example.com
+37,3,7/4/2025,2,54000,Ryota Kato,ryota.kato@example.com
+38,8,7/6/2025,4,58000,Kaito Yamada,kaito.yamada@example.com
+39,11,7/8/2025,5,30000,Yuki Mori,yuki.mori@example.com
+40,15,7/10/2025,3,4500,Mio Shimizu,mio.shimizu@example.com
+41,20,7/12/2025,1,20000,Yuma Kimura,yuma.kimura@example.com
+42,25,7/14/2025,5,25000,Mai Sato,mai.sato@example.com
+43,4,7/5/2025,3,36000,Yui Suzuki,yui.suzuki@example.com
+44,10,7/7/2025,2,19000,Akari Takahashi,akari.t@example.com
+45,13,7/9/2025,4,76000,Yuna Nakamura,yuna.nakamura@example.com
+46,17,7/11/2025,1,80000,Aoi Ito,aoi.ito@example.com
+47,21,7/13/2025,3,21900,Sakura Yoshida,sakura.y@example.com
+48,23,7/15/2025,2,15000,Hinata Tanaka,hinata.tanaka@example.com
+49,1,7/3/2025,4,92000,Riku Hayashi,riku.hayashi@example.com
+50,5,7/5/2025,1,5000,Takumi Inoue,takumi.i@example.com
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
