@@ -62,16 +62,47 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
-            background-size: cover;
-            background-position: center;
+            position: relative;
             height: 100vh;
+            overflow: hidden;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background iframe {
+            width: 100vw;
+            height: 56.25vw; /* 16:9 aspect ratio */
+            min-height: 100vh;
+            min-width: 177.77vh; /* 16:9 aspect ratio */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none; /* Prevent interaction */
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: rgba(0,0,0,0.5); */
+            z-index: 0;
         }
 
         .hero-content h1 {
@@ -398,6 +429,13 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="video-background">
+            <iframe src="https://www.youtube.com/embed/G5RpJwCJDqc?autoplay=1&mute=1&loop=1&playlist=G5RpJwCJDqc&controls=0&showinfo=0&modestbranding=1"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen>
+            </iframe>
+        </div>
         <div class="hero-content">
             <h1>Discover <span style="color: #ff6b35;">Japan</span></h1>
             <p>Experience the beauty and culture of Japan with our expertly guided tours</p>
