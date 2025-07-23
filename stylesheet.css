@@ -404,3 +404,73 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* About Content Box */
+.about-body {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url("bg-image.jpg"); /* Remove spaces from filename */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure container has height */
+}
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 2rem; /* Add some space from top */
+}
+
+.about-header .section-title {
+    color: white; /* Make title white for visibility on background */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Add shadow for readability */
+}
+
+.about-header .section-subtitle {
+    color: rgba(255,255,255,0.9); /* Make subtitle white too */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+.about-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.about-content p {
+    font-size: 1.125rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Call to Action Center */
+.about-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments for about page */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .about-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .about-content p {
+        font-size: 1rem;
+    }
+}

@@ -4,174 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Japan Tours</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Header */
-        .header {
-            background: #0f172a;
-            color: white;
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: #ff6b35;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 4rem 0;
-            background: #f8fafc;
-        }
-
-        .about-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .about-header h1 {
-            font-size: 2.5rem;
-            color: #0f172a;
-            margin-bottom: 1rem;
-        }
-
-        .about-header p {
-            font-size: 1.1rem;
-            color: #666;
-        }
-
-        .about-content {
-            background: white;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 3rem;
-        }
-
-        .about-content h2 {
-            font-size: 2rem;
-            color: #0f172a;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            color: #0f172a;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #ff6b35;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-            margin-top: 2rem;
-        }
-
-        .btn:hover {
-            background: #e55a2b;
-        }
-
-        /* Footer */
-        .footer {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .about-content {
-                padding: 2rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <!-- Header -->
+     
     <header class="header">
-        <div class="nav-container">
+        <div class="nav">
             <div class="logo">Japan Tours</div>
             <nav>
-                <ul class="nav-menu">
+                <ul class="nav-links">
                     <li><a href="jtour.html">Home</a></li>
                     <li><a href="jtour.html#tours">Tours</a></li>
                     <li><a href="about.html">About</a></li>
@@ -180,51 +22,57 @@
         </div>
     </header>
 
+    
     <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-header">
-                <h1>About Japan Tours</h1>
-                <p>Your trusted partner in discovering the beauty of Japan</p>
-            </div>
+    <section class="about-body">
+        <div class="about-header">
+            <h1 class="section-title">About Japan Tours</h1>
+            <p class="section-subtitle">Your trusted partner in discovering the beauty of Japan</p>
+        </div>
 
-            <div class="about-content">
-                <h2>Our Story</h2>
-                <p>Japan Tours was founded with a passion for sharing the incredible beauty, rich culture, and unique experiences that Japan has to offer. We are a team of travel enthusiasts who have spent years exploring every corner of this amazing country.</p>
-                
-                <p>From the bustling streets of Tokyo to the serene bamboo forests of Arashiyama, from the iconic Mount Fuji to the peaceful temples of Kyoto, we curate authentic experiences that showcase the best of Japan.</p>
-                
-                <p>Our mission is to provide travelers with unforgettable journeys that go beyond typical tourist attractions, offering deep cultural immersion and meaningful connections with local communities.</p>
-            </div>
+        <div class="about-content">
+            <h2>Our Story</h2>
+            <p>Japan Tours was founded with a passion for sharing the incredible beauty, rich culture, and unique experiences that Japan has to offer. We are a team of travel enthusiasts who have spent years exploring every corner of this amazing country.</p>
+            
+            <p>From the bustling streets of Tokyo to the serene bamboo forests of Arashiyama, from the iconic Mount Fuji to the peaceful temples of Kyoto, we curate authentic experiences that showcase the best of Japan.</p>
+            
+            <p>Our mission is to provide travelers with unforgettable journeys that go beyond typical tourist attractions, offering deep cultural immersion and meaningful connections with local communities.</p>
+        </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Expert Guides</h3>
-                    <p>Our local guides are passionate experts who provide authentic insights into Japanese culture, history, and traditions.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>Authentic Experiences</h3>
-                    <p>We focus on genuine cultural experiences that connect you with the real Japan, not just tourist attractions.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>Small Groups</h3>
-                    <p>Our tours are designed for small groups to ensure personalized attention and a more intimate experience.</p>
+        <div class="tours-grid">
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Expert Guides</h3>
+                    <p class="tour-description">Our local guides are passionate experts who provide authentic insights into Japanese culture, history, and traditions.</p>
                 </div>
             </div>
-
-            <div style="text-align: center;">
-                <a href="tours.html" class="btn">Explore Our Tours</a>
+            
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Authentic Experiences</h3>
+                    <p class="tour-description">We focus on genuine cultural experiences that connect you with the real Japan, not just tourist attractions.</p>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Small Groups</h3>
+                    <p class="tour-description">Our tours are designed for small groups to ensure personalized attention and a more intimate experience.</p>
+                </div>
             </div>
         </div>
+
+        <div class="about-cta">
+            <a href="jtour.html#tours" class="btn">Explore Our Tours</a>
+        </div>
     </section>
+    
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Japan Tours. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Japan Tours. All rights reserved.</p>
     </footer>
+
+
 </body>
 </html>
